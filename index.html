@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>D-Clothing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo">DC</div>
+        <div>
+          <div class="site-title">D-Clothing</div>
+          <div class="tag">Style | Comfort | Everyday</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="search" placeholder="Search clothing, e.g. hoodie, jeans...">
+      </div>
+
+      <div class="header-actions">
+        <a href="cart.html" class="small">Cart (<span id="cart-count">0</span>)</a>
+        <a href="login.html" class="small">Login</a>
+        <a href="admin-login.html" class="small">Admin</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Fresh looks for every day</h1>
+        <p>Shop the latest collection — premium fabrics, conscious design.</p>
+
+        <div style="margin-top:12px">
+          <a href="#products" class="cta">Shop Now</a>
+        </div>
+      </div>
+
+      <div style="width:360px">
+        <img src="assets/images/hero.avif" style="width:100%;border-radius:12px;object-fit:cover">
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <h2 style="margin-top:40px;">Why Shop With D-Clothing?</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="assets/Images/premium_quality.avif" style="width:100%;border-radius:12px;">
+        <h3>Premium Quality</h3>
+        <p class="small">Soft fabrics, long-lasting stitching & comfortable wear.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/Images/latest_trends.avif" style="width:100%;border-radius:12px;">
+        <h3>Latest Trends</h3>
+        <p class="small">Weekly fresh arrivals with modern fashion styles.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/Images/fast_delivery.avif" style="width:100%;border-radius:12px;">
+        <h3>Fast Delivery</h3>
+        <p class="small">We deliver your outfit as quickly as possible.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/Images/stylish_jackets.avif" style="width:100%;border-radius:12px;">
+        <h3>Stylish Jackets</h3>
+        <p class="small">Lightweight and trendy jackets for every occasion.</p>
+      </div>
+
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <h2 id="products" style="margin-top:40px;">Featured</h2>
+    <div id="product-grid" class="grid"></div>
+
+  </div> <!-- END CONTAINER -->
+
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    // initial load
+    renderProducts('product-grid');
+
+    // search filter
+    document.getElementById('search').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      const all = getProducts();
+      const filtered = all.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.desc.toLowerCase().includes(q)
+      );
+
+      document.getElementById('product-grid').innerHTML = filtered.map(p => `
+        <div class="card">
+          <img class="product-image" src="${p.img}" alt="${p.name}">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="product-title">${p.name}</div>
+              <div class="small">${p.desc}</div>
+            </div>
+            ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="price">₹${p.price}</div>
+            <div class="actions">
+              <a class="cta" href="product.html?id=${p.id}">View</a>
+              <button class="icon-btn" onclick="addToCart(${p.id})"
+                style="background:var(--brand);color:white;padding:8px 10px;border-radius:10px">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    });
+  </script>
+
+</body>
+</html>

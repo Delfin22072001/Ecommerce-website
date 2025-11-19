@@ -1,0 +1,83 @@
+/* D-CLothing - modern responsive styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --brand:#ff3366;
+  --accent:#111827;
+  --muted:#6b7280;
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --radius:14px;
+  --shadow: 0 10px 30px rgba(12,16,30,0.06);
+  --error:#dc2626;
+  --success:#16a34a;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--accent);background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:1150px;margin:28px auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#ff6b94);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+}
+.site-title{font-weight:700;font-size:18px}
+.tag{color:var(--muted);font-size:13px}
+
+/* search / nav */
+.search{flex:1;margin:0 16px}
+.search input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e6e9ef;background:white}
+.header-actions{display:flex;gap:10px;align-items:center}
+.icon-btn{background:transparent;border:0;padding:8px 10px;border-radius:10px;cursor:pointer}
+.cta{background:var(--brand);color:white;padding:10px 14px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(255,51,102,0.12);border:none;cursor:pointer;font-size:14px;display:inline-block;text-align:center}
+
+/* Hero */
+.hero{display:flex;gap:24px;align-items:center;margin:22px 0;padding:24px;border-radius:18px;background:linear-gradient(90deg,rgba(255,51,102,0.06),transparent)}
+.hero-left{flex:1}
+.hero h1{margin:0;font-size:32px}
+.hero p{color:var(--muted);margin-top:8px}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);border-radius:14px;padding:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.product-image{width:100%;height:260px;object-fit:cover;border-radius:12px;background:#f8fafc}
+.badge{display:inline-block;padding:6px 8px;border-radius:10px;font-size:12px;background:linear-gradient(90deg,var(--brand),#ff6b94);color:white}
+
+/* product footer */
+.product-title{font-weight:600}
+.price{color:var(--brand);font-weight:700;font-size:16px}
+.actions{display:flex;gap:8px;align-items:center;margin-top:auto}
+.small{font-size:13px;color:var(--muted)}
+
+/* cart & controls */
+.qty-controls{display:flex;align-items:center;gap:8px}
+.qty-controls button{background:#f1f5f9;border:1px solid #e6e9ef;padding:6px 8px;border-radius:8px;cursor:pointer}
+
+/* forms & tables */
+.input, input, textarea, select{padding:10px;border-radius:10px;border:1px solid #e6e9ef;width:100%;font-size:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #f1f5f9}
+
+/* tiny helper */
+.center{display:flex;align-items:center;justify-content:center}
+
+/* Error states */
+.error{border-color:var(--error)!important}
+.error-message{color:var(--error);font-size:12px;margin-top:4px}
+.success-message{color:var(--success);font-size:12px;margin-top:4px}
+
+/* Filter and categories */
+.filter-bar{display:flex;gap:12px;margin:20px 0;flex-wrap:wrap}
+.filter-btn{padding:8px 16px;border:1px solid #e6e9ef;border-radius:10px;background:white;cursor:pointer;transition:all 0.2s}
+.filter-btn.active{background:var(--brand);color:white;border-color:var(--brand)}
+
+/* Image error handling */
+.image-fallback{width:100%;height:200px;background:linear-gradient(135deg,#f1f5f9,#e2e8f0);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.image-fallback::before{content:"📷 Image";font-size:14px}
+
+/* responsive */
+@media (max-width:800px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .product-image{height:200px}
+  .filter-bar{justify-content:center}
+}

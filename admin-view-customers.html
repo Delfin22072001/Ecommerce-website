@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Customers — Admin</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+  <div class="container">
+    <a href="admin-dashboard.html" class="small">← Back</a>
+    <h2>Customers</h2>
+    <div id="admin-customers"></div>
+  </div>
+<script src="assets/js/app.js"></script>
+<script>
+  const users = adminGetCustomers();
+  const box = document.getElementById('admin-customers');
+  if(!users || users.length===0) box.innerHTML = '<div class="card">No customers</div>';
+  else box.innerHTML = `<table class="table"><thead><tr><th>Name</th><th>Email</th></tr></thead><tbody>${users.map(u=>`<tr><td>${u.name}</td><td>${u.email}</td></tr>`).join('')}</tbody></table>`;
+</script>
+</body>
+</html>

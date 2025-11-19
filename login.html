@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Login — D-Clothing</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+  <div class="container">
+    <a href="index.html" class="small">← Back</a>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:12px">
+      <div class="card" style="flex:1;min-width:280px">
+        <h3>Login</h3>
+        <input id="login-email" class="input" placeholder="Email">
+        <input id="login-pass" class="input" placeholder="Password" type="password">
+        <div style="margin-top:10px"><button class="cta" onclick="doLogin()">Login</button></div>
+      </div>
+
+      <div class="card" style="flex:1;min-width:280px">
+        <h3>Register</h3>
+        <input id="reg-name" class="input" placeholder="Full name">
+        <input id="reg-email" class="input" placeholder="Email">
+        <input id="reg-pass" class="input" placeholder="Password" type="password">
+        <div style="margin-top:10px"><button class="cta" onclick="doRegister()">Register</button></div>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/js/app.js"></script>
+<script>
+  function doLogin(){
+    const e = document.getElementById('login-email').value.trim();
+    const p = document.getElementById('login-pass').value.trim();
+    const r = loginUser(e,p);
+    if(r.ok){ alert('Logged in'); location.href='index.html'; }
+    else alert(r.msg);
+  }
+  function doRegister(){
+    const n = document.getElementById('reg-name').value.trim();
+    const e = document.getElementById('reg-email').value.trim();
+    const p = document.getElementById('reg-pass').value.trim();
+    if(!n || !e || !p){ alert('Fill all fields'); return; }
+    const r = registerUser(n,e,p);
+    if(r.ok){ alert('Registered — please login'); document.getElementById('reg-name').value=''; document.getElementById('reg-email').value=''; document.getElementById('reg-pass').value=''; }
+    else alert(r.msg);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Orders — Admin</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+  <div class="container">
+    <a href="admin-dashboard.html" class="small">← Back</a>
+    <h2>All Orders</h2>
+    <div id="admin-orders"></div>
+  </div>
+<script src="assets/js/app.js"></script>
+<script>
+  const orders = adminGetOrders();
+  const box = document.getElementById('admin-orders');
+  if(!orders || orders.length===0) box.innerHTML = '<div class="card">No orders</div>';
+  else box.innerHTML = orders.map(o => `<div class="card" style="margin-bottom:12px"><div style="display:flex;justify-content:space-between"><div><strong>${o.id}</strong></div><div class="small">${new Date(o.date).toLocaleString()}</div></div><div class="small">User: ${o.user}</div><div style="margin-top:8px">${o.items.map(i=>`<div>${i.qty}x ${i.name} — ₹${i.price * i.qty}</div>`).join('')}</div><div style="margin-top:8px"><strong>Total ₹${o.total}</strong></div></div>`).join('');
+</script>
+</body>
+</html>
