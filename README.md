@@ -1,4 +1,4 @@
-Dclothing Documentation
+
 📘 D-Clothing — README
 🛍️ Project Overview
 
