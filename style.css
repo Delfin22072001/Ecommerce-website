@@ -1,0 +1,201 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', "Helvetica Neue", Arial, sans-serif;
+}
+
+/* navbar */
+
+.nav-link {
+  font-size: 1.03em;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* hero carousel */
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 3;
+}
+
+.carousel-caption p {
+  font-size: 12px;
+  transform: scale(1.5);
+}
+
+.btn {
+  transition: transform 0.5s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* trending dress images */
+
+.card {
+  height: 430px;
+  width: auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-body img {
+  height: 260px;
+  object-position: top;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* footer */
+
+.footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer h5 {
+  font-size: 18px;
+}
+
+.footer li, .footer li a {
+  list-style: none;
+  font-size:16px;
+}
+
+.fa-brands {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  color: black;
+}
+
+.fa-brands:hover {
+  background-color: black;
+  color: white;
+}
+
+.policy {
+  color: black;
+}
+
+.policy:hover {
+  color: grey;
+}
+.home-page,.home-page1,.home-page2{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  width: 100%;
+  height: 80vh;
+}
+.home-page {
+  background-image: url("images/womens-clothing.png");
+}
+.home-page1{
+  background-image: url("images/mens-clothing.png");
+}
+.home-page2{
+  background-image: url("images/kids-clothing.png");
+}
+
+/* checkout.html */
+.product-name{
+  font-size: 25px;
+}
+.product-description, .quantity{
+  font-size: 17.5px;
+  
+}
+
+.box{
+  display: flex;
+  height: 30px;
+  width:30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid rgb(207, 204, 204);
+}
+
+.box1,.box2,.box3{
+  justify-content: center;
+  align-items: center;
+}
+
+.box1,.box3{
+  font-size: 14px;
+}
+.box2{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+ .cart,.wishlist{
+  width:150px;
+  padding:8px;
+}
+
+.wishlist{
+  border: 1px solid rgb(196, 192, 192);
+}
+
+#notification{
+  display:none;
+  height:auto;
+  width:auto;
+  position:absolute;
+  padding:10px;
+  right:20px;
+  top:100px;
+  background-color:black;
+  color:white;
+  border-radius:10px;
+  animation: myAnimation 0.2s ease;
+}
+
+@keyframes myAnimation {
+  from{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity:1;
+  }
+}
