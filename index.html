@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DELL Shopping</title>
+  <title>DD Shopping</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-5">
       <div class="container">
-        <a class="navbar-brand fs-4 mx-2" href="index.html">DELL Shopping</a>
+        <a class="navbar-brand fs-4 mx-2" href="index.html">DD Shopping</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -84,12 +84,10 @@
       </button>
     </div>
 
-    <!-- trendy collection cards -->
-    <div class="trendy-cards">
-      <h3 class="text-uppercase text-secondary text-center font-cursive mt-5 p-5">choose by category</h3>
+    <div>
+      <h3 class="text-uppercase text-secondary text-center fw-bold mt-5 p-5">choose by category</h3>
       <div class="container">
         <div class="row">
-          <!-- Use columns to define card width and responsiveness -->
           <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card">
               <div class="card-body text-center">
@@ -122,6 +120,59 @@
           </div>
         </div>
       </div>
+
+      
+  <!-- trendy collection cards -->
+  <div class="trendy-cards">
+    <h3 class="text-uppercase text-center text-secondary fw-bolder font-cursive mt-5 p-5">Latest Collections</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <img class="image" src="images/kurti-trend.avif" class="card-img-top" alt="Kurti">
+              <h5 class="card-title my-3">White Cotton Kurti</h5>
+              <a class="btn btn-primary buy-btn my-2" data-name="White Cotton Kurti"
+                data-description="Lightweight white cotton kurti with delicate floral embroidery, perfect for daily wear and summer outings."
+                data-rating="4.2" data-price="199" data-image="images/kurti-trend.avif">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <img src="images/tshirt-trend.webp" class="card-img-top" alt="T-Shirt">
+              <h5 class="card-title my-3">Stylish T-Shirt</h5>
+              <button class="btn btn-primary buy-btn my-2" data-name="Stylish T-Shirt"
+                data-description="Premium cotton black T-shirt with a modern slim fit, comfortable for everyday casual wear."
+                data-price="250" data-rating="4.5" data-image="images/tshirt-trend.webp">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <img src="images/saree-trend.webp" class="card-img-top" alt="Wedding Saree">
+              <h5 class="card-title my-3">Wedding Saree</h5>
+              <button class="btn btn-primary buy-btn my-2" data-name="Wedding Saree"
+                data-description="Graceful pink saree with traditional patterns, suitable for festivals and special events."
+                data-price="1050" data-rating="4.2" data-image="images/saree-trend.webp">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <img src="images/regular-tshirt-trend.webp" class="card-img-top" alt="kids tshirt">
+              <h5 class="card-title my-3">Regular T-shirt</h5>
+              <button class="btn btn-primary buy-btn my-2" data-name="Regular T-shirt"
+                data-description="Soft cotton kids T-shirt with fun print, gentle on skin and perfect for daily play."
+                data-price="150" data-rating="4.1" data-image="images/regular-tshirt-trend.webp">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <footer>
         <div class="footer mt-5 bg-light">
