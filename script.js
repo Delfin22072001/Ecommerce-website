@@ -1,6 +1,7 @@
 // index.html
 
 if (
+  window.location.pathname === '/' ||
   window.location.pathname.includes('index.html') ||
   window.location.pathname.includes('womenClothing.html') ||
   window.location.pathname.includes('kidsClothing.html') ||
@@ -87,7 +88,7 @@ if(window.location.pathname.includes('addtocart.html')){
     const my_wishlist = document.querySelector('.wishlist')
     let price
 
-    my_cart.addEventListener('click',()=>{
+    my_cart.addEventListener('click', () =>{
       notification.style.display = "block"
       price =  product_price * i
       notification.textContent = `Item bought. Total price is ₹${price}`
@@ -96,11 +97,9 @@ if(window.location.pathname.includes('addtocart.html')){
     my_wishlist.addEventListener('click',()=>{
       notification.style.display = "block"
       notification.textContent = `${product_name} added to wishlist`
-    })
-    
+    })   
   } 
 }
-
 
 
 
