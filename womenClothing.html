@@ -38,9 +38,9 @@
           <!-- Desktop Search -->
           <form class="d-flex">
             <div class="input-group">
-              <input class="form-control" type="search" placeholder="Search">
+              <input class="form-control" id="desktop-search" type="search" placeholder="Search">
 
-              <button class="btn btn-outline-light" type="submit">
+              <button id="desktop-submit-btn" class="btn btn-outline-light" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
@@ -69,8 +69,8 @@
       <!-- Mobile Search -->
       <form class="mt-4">
         <div class="input-group">
-          <input type="search" class="form-control" placeholder="Search">
-          <button class="btn btn-outline-light" type="submit">
+          <input type="search" class="form-control" id="mobile-search" placeholder="Search">
+          <button id="mobile-submit-btn" class="btn btn-outline-light" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
@@ -80,11 +80,11 @@
 
   <main>
     <div class="home-page"></div>
-    <div class="trendy-cards">
-      <h3 class="text-secondary text-center fw-bolder text-uppercase mt-5 ms-5 p-5">Kurti Sets</h3>
+    <div class="trendy-cards px-5">
+      <h3 class="text-secondary text-center fw-bolder text-uppercase mt-5 ms-5 p-5">Elegant Womens Collection</h3>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/kurti-image1.webp" class="card-img-top" alt="Kurti">
@@ -96,7 +96,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/kurti-image2.avif" class="card-img-top" alt="Kurti">
@@ -108,7 +108,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/kurti-image3.webp" class="card-img-top" alt="Kurti">
@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/kurti-image4.webp" class="card-img-top" alt="Kurti">
@@ -132,8 +132,7 @@
               </div>
             </div>
           </div>
-          <h3 class="text-secondary text-center fw-bolder text-uppercase mt-3 ms-5 p-5">Western Styles</h3>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/western-image1.jpg" class="card-img-top" alt="western">
@@ -145,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/western-image2.avif" class="card-img-top" alt="western">
@@ -157,7 +156,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/western-image3.webp" class="card-img-top" alt="western">
@@ -169,7 +168,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
             <div class="card">
               <div class="card-body text-center">
                 <img class="image" src="images/western-image4.webp" class="card-img-top" alt="Kurti">
@@ -187,7 +186,7 @@
   </main>
 
   <footer>
-    <div class="footer mt-5 bg-light">
+    <div class="footer mt-5 bg-light px-3">
       <div class="container pt-5 pb-3">
         <div class="row">
           <div class="col-md-3 col-sm-12 px-2">
