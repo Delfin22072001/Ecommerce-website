@@ -2,218 +2,219 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrendHub</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-3">
-  <div class="container">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-3">
+      <div class="container">
 
-    <!-- Logo -->
-    <a class="navbar-brand fs-4" href="index.html">TrendHub</a>
+        <!-- Logo -->
+        <a class="navbar-brand fs-4" href="index.html">TrendHub</a>
 
-    <!-- Mobile Toggle -->
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Desktop Navbar -->
-    <div class="d-none d-lg-flex align-items-center w-100">
+        <!-- Desktop Navbar -->
+        <div class="d-none d-lg-flex align-items-center w-100">
 
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link active mx-2" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link mx-2" href="womenClothing.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link mx-2" href="kidsClothing.html">Kids</a></li>
-        <li class="nav-item"><a class="nav-link mx-2" href="menClothing.html">Men</a></li>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active mx-2" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="womenClothing.html">Women</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="kidsClothing.html">Kids</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="menClothing.html">Men</a></li>
+          </ul>
+
+          <!-- Desktop Search -->
+          <form class="d-flex">
+            <div class="input-group">
+              <input class="form-control" id="desktop-search" type="search" placeholder="Search">
+              <button id="desktop-submit-btn" class="btn btn-outline-light" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
+
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">TrendHub</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="womenClothing.html">Women</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="kidsClothing.html">Kids</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="menClothing.html">Men</a></li>
       </ul>
 
-      <!-- Desktop Search -->
-      <form class="d-flex">
+      <!-- Mobile Search -->
+      <form class="mt-4">
         <div class="input-group">
-          <input class="form-control" type="search" placeholder="Search">
-
-          <button class="btn btn-outline-light" type="submit">
+          <input type="search" id="mobile-search" class="form-control" placeholder="Search">
+          <button id="mobile-submit-btn" class="btn btn-outline-light" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </form>
     </div>
   </div>
-</nav>
-</header>
+  <main>
 
-<!-- Mobile Sidebar -->
-<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
-
-<div class="offcanvas-header">
-  <h5 class="offcanvas-title">TrendHub</h5>
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-</div>
-
-<div class="offcanvas-body">
-  <ul class="navbar-nav">
-    <li class="nav-item mb-2"><a class="nav-link active" href="index.html">Home</a></li>
-    <li class="nav-item mb-2"><a class="nav-link" href="womenClothing.html">Women</a></li>
-    <li class="nav-item mb-2"><a class="nav-link" href="kidsClothing.html">Kids</a></li>
-    <li class="nav-item mb-2"><a class="nav-link" href="menClothing.html">Men</a></li>
-  </ul>
-
-  <!-- Mobile Search -->
-  <form class="mt-4">
-    <div class="input-group">
-      <input type="search" class="form-control" placeholder="Search">
-      <button class="btn btn-outline-light" type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
+    <!-- hero-section carousel -->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"
+      data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/image1.jpg" class="d-block w-100" alt="Women’s fashion collection">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-caption mb-5 pb-5">
+            <h1 class="fw-bold my-3 display-4">Trendy Women’s Wear</h1>
+            <p>Discover the latest fashion picks for every occasion</p>
+            <a href="womenClothing.html" class="btn btn-info px-4">Explore Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image2.webp" class="d-block w-100" alt="kids wear">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-caption mb-5 pb-5">
+            <h1 class="fw-bold my-3 display-4">Cute and Comfy Kids Wear</h1>
+            <p>Soft, colorful and playful outfits for kids</p>
+            <a href="kidsClothing.html" class="btn btn-success px-4">Explore Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/image4.avif" class="d-block w-100" alt="Men’s fashion collection">
+          <div class="carousel-overlay"></div>
+          <div class="carousel-caption mb-5 pb-5">
+            <h1 class="fw-bold my-3 display-4">Stylish Men’s Collection</h1>
+            <p>Premium fits for work, casual and party wear</p>
+            <a href="menClothing.html" class="btn btn-warning px-4">Explore Now</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </form>
-</div>
-</div>
-<main>
 
-<!-- hero-section carousel -->
-<div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel" data-bs-wrap="true"
-  data-bs-interval="3000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/image1.jpg" class="d-block w-100" alt="Women’s fashion collection">
-      <div class="carousel-overlay"></div>
-      <div class="carousel-caption mb-5 pb-5">
-        <h1 class="fw-bold my-3 display-4">Trendy Women’s Wear</h1>
-        <p>Discover the latest fashion picks for every occasion</p>
-        <a href="womenClothing.html" class="btn btn-info px-4">Explore Now</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/image2.webp" class="d-block w-100" alt="kids wear">
-      <div class="carousel-overlay"></div>
-      <div class="carousel-caption mb-5 pb-5">
-        <h1 class="fw-bold my-3 display-4">Cute and Comfy Kids Wear</h1>
-        <p>Soft, colorful and playful outfits for kids</p>
-        <a href="kidsClothing.html" class="btn btn-success px-4">Explore Now</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/image4.avif" class="d-block w-100" alt="Men’s fashion collection">
-      <div class="carousel-overlay"></div>
-      <div class="carousel-caption mb-5 pb-5">
-        <h1 class="fw-bold my-3 display-4">Stylish Men’s Collection</h1>
-        <p>Premium fits for work, casual and party wear</p>
-        <a href="menClothing.html" class="btn btn-warning px-4">Explore Now</a>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-    data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-    data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<!-- choose by category -->
-<div>
-  <h3 class="text-uppercase text-secondary text-center fw-bold mt-5 p-5">choose by category</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <img src="images/sherwani-trend.jpg" class="card-img-top" alt="Sherwani">
-            <h5 class="card-title mt-4">Womens Collection</h5>
-            <p class="text-secondary mt-2">Elegance in every thread, power in every step</p>
-            <a href="womenClothing.html" class="btn btn-primary">View Here</a>
+    <!-- trendy collection cards -->
+    <div class="trendy-cards p-5">
+      <h3 class="text-uppercase text-center text-secondary fw-bolder p-5">Trendy Collections</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
+            <div class="card">
+              <div class="card-body text-center">
+                <img class="image" src="images/kurti-trend.avif" class="card-img-top" alt="Kurti">
+                <h5 class="card-title mt-3">White Cotton Kurti</h5>
+                <p class="card-text">₹199</p>
+                <a class="btn btn-primary buy-btn" data-name="White Cotton Kurti"
+                  data-description="Lightweight white cotton kurti with delicate floral embroidery, perfect for daily wear and summer outings."
+                  data-rating="4.2" data-price="199" data-image="images/kurti-trend.avif">View Details</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <img src="images/gowm-trend.jpg" class="card-img-top" alt="Kids gowm">
-            <h5 class="card-title mt-4">Kids Collection</h5>
-            <p class="text-secondary mt-2">Mini styles for the next generation</p>
-            <a href="kidsClothing.html" class="btn btn-primary buy-btn">View Here</a>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/tshirt-trend.webp" class="card-img-top" alt="T-Shirt">
+                <h5 class="card-title mt-3">Stylish T-Shirt</h5>
+                <p class="card-text">₹250</p>
+                <button class="btn btn-primary buy-btn" data-name="Stylish T-Shirt"
+                  data-description="Premium cotton black T-shirt with a modern slim fit, comfortable for everyday casual wear."
+                  data-price="250" data-rating="4.5" data-image="images/tshirt-trend.webp">View Details</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body text-center">
-            <img src="images/shirt-trend.webp" class="card-img-top" alt="Green Linen Shirt">
-            <h5 class="card-title mt-4">Mens Collection</h5>
-            <p class="text-secondary mt-2">Built for performance, styled for life</p>
-            <a href="menClothing.html" class="btn btn-primary buy-btn">View Here</a>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/saree-trend.webp" class="card-img-top" alt="Wedding Saree">
+                <h5 class="card-title mt-3">Wedding Saree</h5>
+                <p class="card-text">₹1050</p>
+                <button class="btn btn-primary buy-btn" data-name="Wedding Saree"
+                  data-description="Graceful pink saree with traditional patterns, suitable for festivals and special events."
+                  data-price="1050" data-rating="4.2" data-image="images/saree-trend.webp">View Details</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- trendy collection cards -->
-  <div class="trendy-cards">
-    <h3 class="text-uppercase text-center text-secondary fw-bolder mt-5 p-5">Trendy Collections</h3>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body text-center">
-              <img class="image" src="images/kurti-trend.avif" class="card-img-top" alt="Kurti">
-              <h5 class="card-title mt-3">White Cotton Kurti</h5>
-              <p class="card-text">₹199</p>
-              <a class="btn btn-primary buy-btn" data-name="White Cotton Kurti"
-                data-description="Lightweight white cotton kurti with delicate floral embroidery, perfect for daily wear and summer outings."
-                data-rating="4.2" data-price="199" data-image="images/kurti-trend.avif">View Details</a>
+          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/regular-tshirt-trend.webp" class="card-img-top" alt="kids tshirt">
+                <h5 class="card-title mt-3">Regular T-shirt</h5>
+                <p class="card-text">₹150</p>
+                <button class="btn btn-primary buy-btn" data-name="Regular T-shirt"
+                  data-description="Soft cotton kids T-shirt with fun print, gentle on skin and perfect for daily play."
+                  data-price="150" data-rating="4.1" data-image="images/regular-tshirt-trend.webp">View
+                  Details</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body text-center">
-              <img src="images/tshirt-trend.webp" class="card-img-top" alt="T-Shirt">
-              <h5 class="card-title mt-3">Stylish T-Shirt</h5>
-              <p class="card-text">₹250</p>
-              <button class="btn btn-primary buy-btn" data-name="Stylish T-Shirt"
-                data-description="Premium cotton black T-shirt with a modern slim fit, comfortable for everyday casual wear."
-                data-price="250" data-rating="4.5" data-image="images/tshirt-trend.webp">View Details</button>
+      </div>
+    </div>
+
+    <!-- choose by category -->
+    <div class="px-5">
+      <h3 class="text-uppercase text-secondary text-center fw-bold mt-5 p-5">choose by category</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/sherwani-trend.jpg" class="card-img-top" alt="Sherwani">
+                <h5 class="card-title mt-4">Womens Collection</h5>
+                <p class="text-secondary mt-2">Elegance in every thread, power in every step</p>
+                <a href="womenClothing.html" class="btn btn-primary">View Here</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body text-center">
-              <img src="images/saree-trend.webp" class="card-img-top" alt="Wedding Saree">
-              <h5 class="card-title mt-3">Wedding Saree</h5>
-              <p class="card-text">₹1050</p>
-              <button class="btn btn-primary buy-btn" data-name="Wedding Saree"
-                data-description="Graceful pink saree with traditional patterns, suitable for festivals and special events."
-                data-price="1050" data-rating="4.2" data-image="images/saree-trend.webp">View Details</button>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/gowm-trend.jpg" class="card-img-top" alt="Kids gowm">
+                <h5 class="card-title mt-4">Kids Collection</h5>
+                <p class="text-secondary mt-2">Mini styles for the next generation</p>
+                <a href="kidsClothing.html" class="btn btn-primary buy-btn">View Here</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-          <div class="card">
-            <div class="card-body text-center">
-              <img src="images/regular-tshirt-trend.webp" class="card-img-top" alt="kids tshirt">
-              <h5 class="card-title mt-3">Regular T-shirt</h5>
-              <p class="card-text">₹150</p>
-              <button class="btn btn-primary buy-btn" data-name="Regular T-shirt"
-                data-description="Soft cotton kids T-shirt with fun print, gentle on skin and perfect for daily play."
-                data-price="150" data-rating="4.1" data-image="images/regular-tshirt-trend.webp">View
-                Details</button>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="images/shirt-trend.webp" class="card-img-top" alt="Green Linen Shirt">
+                <h5 class="card-title mt-4">Mens Collection</h5>
+                <p class="text-secondary mt-2">Built for performance, styled for life</p>
+                <a href="menClothing.html" class="btn btn-primary buy-btn">View Here</a>
+              </div>
             </div>
           </div>
         </div>
@@ -221,7 +222,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </div>
 
     <footer>
-      <div class="footer mt-5 bg-light">
+      <div class="footer mt-5 bg-light px-3">
         <div class="container pt-5 pb-3">
           <div class="row">
             <div class="col-md-3 col-sm-12 px-2">
