@@ -101,7 +101,38 @@ if(window.location.pathname.includes('addtocart.html')){
   } 
 }
 
+// search bar
+const desktop_search = document.getElementById('desktop-search')
+const mobile_search = document.getElementById('mobile-search')
+const mobile_btn = document.getElementById('mobile-submit-btn')
+const desktop_btn = document.getElementById('desktop-submit-btn')
+const dress_cards = document.querySelectorAll('.dress-cards')
 
+//desktop search bar
+
+function searchBar(input){
+    dress_cards.forEach(card =>{
+    const card_title = card.querySelector('.card-title')
+    if(card_title.textContent.toLowerCase().includes(input.toLowerCase())){
+      card.style.display = "block"
+    }
+    else{
+      card.style.display = "none"
+    }
+  })
+}
+
+desktop_btn.addEventListener('click',(e) =>{
+  e.preventDefault()
+  d_search = desktop_search.value 
+  searchBar(d_search)
+})
+
+mobile_btn.addEventListener('click',(e) =>{
+  e.preventDefault()
+  m_search = mobile_search.value 
+  searchBar(m_search)
+})
 
 
 
