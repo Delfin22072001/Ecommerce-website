@@ -25,7 +25,7 @@ if (
 
 // addtocart.html
 
-if(window.location.pathname.includes('addtocart.html')){   
+if (window.location.pathname.includes('addtocart.html')) {
   const params = new URLSearchParams(window.location.search)
   const product_name = params.get('name')
   const product_description = params.get('description')
@@ -35,8 +35,8 @@ if(window.location.pathname.includes('addtocart.html')){
 
 
   const data = document.querySelector('.place-order')
-  
-  if(product_name  && product_description && product_price && product_rating && product_image){
+
+  if (product_name && product_description && product_price && product_rating && product_image) {
     data.innerHTML = `
     <div class="my_items justify-content-center">
       <div class="container">
@@ -63,42 +63,51 @@ if(window.location.pathname.includes('addtocart.html')){
         </div>
       </div>
     </div>`
-    
+
     // items increase and decrease count logic
-    const i_count=document.querySelector('.box1')
-    const count=document.querySelector('.box2')
-    const d_count=document.querySelector('.box3')
+    const i_count = document.querySelector('.box1')
+    const count = document.querySelector('.box2')
+    const d_count = document.querySelector('.box3')
     let i = 1
-    count.textContent=i
-    i_count.addEventListener('click',()=>{
+    count.textContent = i
+    i_count.addEventListener('click', () => {
       i++
       count.textContent = i
-      
+
     })
-    d_count.addEventListener('click',()=>{
-      if(i>1){
-      i--
-       count.textContent = i
+    d_count.addEventListener('click', () => {
+      if (i > 1) {
+        i--
+        count.textContent = i
       }
     })
 
     // notification msg
     const popup_notification = document.getElementById('notification')
-    const my_cart = document.querySelector('.cart') 
+    const my_cart = document.querySelector('.cart')
     const my_wishlist = document.querySelector('.wishlist')
     let price
 
-    my_cart.addEventListener('click', () =>{
+    function msgClear(msg) {
+      setTimeout(() => {
+        msg.style.display = "none"
+      }, 1000);
+    }
+
+    my_cart.addEventListener('click', () => {
       notification.style.display = "block"
-      price =  product_price * i
-      notification.textContent = `Item bought. Total price is ₹${price}`
+      price = product_price * i
+      notification.textContent = `${i} Item bought. Total price is ₹${price}`
+      msgClear(notification)
     })
 
-    my_wishlist.addEventListener('click',()=>{
+    my_wishlist.addEventListener('click', () => {
       notification.style.display = "block"
       notification.textContent = `${product_name} added to wishlist`
-    })   
-  } 
+      msgClear(notification)
+    })
+
+  }
 }
 
 // search bar
@@ -107,33 +116,34 @@ const mobile_search = document.getElementById('mobile-search')
 const mobile_btn = document.getElementById('mobile-submit-btn')
 const desktop_btn = document.getElementById('desktop-submit-btn')
 const dress_cards = document.querySelectorAll('.dress-cards')
+const item_count = document.getElementById('item-count')
 
-//desktop search bar
 
-function searchBar(input){
-    dress_cards.forEach(card =>{
+function searchBar(input) {
+  let count = 0
+  dress_cards.forEach(card => {
     const card_title = card.querySelector('.card-title')
-    if(card_title.textContent.toLowerCase().includes(input.toLowerCase())){
-      card.style.display = "block"
+    if (card_title.textContent.trim().toLowerCase().includes(input.toLowerCase())) {
+      count += 1      
+      card.style.display = "block"      
     }
-    else{
+    else {
+      item_count.style.color = "#555"
       card.style.display = "none"
     }
   })
+  item_count.textContent = `${count} matching items found`
 }
 
-desktop_btn.addEventListener('click',(e) =>{
+desktop_btn.addEventListener('click', (e) => {
   e.preventDefault()
-  d_search = desktop_search.value 
+  d_search = desktop_search.value
   searchBar(d_search)
 })
 
-mobile_btn.addEventListener('click',(e) =>{
+mobile_btn.addEventListener('click', (e) => {
   e.preventDefault()
-  m_search = mobile_search.value 
+  m_search = mobile_search.value
   searchBar(m_search)
 })
-
-
-
 
