@@ -208,12 +208,3 @@ p {
   }
 }
 
-@media (max-width:768px) {
-  .home-page,.home-page1,.home-page2{
-    background-size: contain;
-    height:40vh;
-    width:100%;
-    margin:0;
-    padding:0;
-  }
-}
