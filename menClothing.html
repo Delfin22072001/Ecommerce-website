@@ -9,7 +9,7 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <title>Online Shopping for Men</title>
+  <title>TrendHub</title>
 </head>
 
 <body>
@@ -34,14 +34,14 @@
             <li class="nav-item"><a class="nav-link mx-2" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link mx-2" href="womenClothing.html">Women</a></li>
             <li class="nav-item"><a class="nav-link mx-2" href="kidsClothing.html">Kids</a></li>
-            <li class="nav-item"><a class="nav-link mx-2 active" href="menClothing.html">Men</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="menClothing.html">Men</a></li>
           </ul>
 
           <!-- Desktop Search -->
           <form class="d-flex">
             <div class="input-group">
-              <input class="form-control" id="desktop-search" type="search" placeholder="Search">
-              <button id="desktop-submit-btn" class="btn btn-outline-light" type="submit">
+              <input id="Myform" class="form-control" type="search" placeholder="Search">
+              <button id="Mybtn" class="btn btn-outline-light" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
@@ -64,14 +64,14 @@
         <li class="nav-item mb-2"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item mb-2"><a class="nav-link" href="womenClothing.html">Women</a></li>
         <li class="nav-item mb-2"><a class="nav-link" href="kidsClothing.html">Kids</a></li>
-        <li class="nav-item mb-2"><a class="nav-link active" href="menClothing.html">Men</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="menClothing.html">Men</a></li>
       </ul>
 
       <!-- Mobile Search -->
       <form class="mt-4">
         <div class="input-group">
-          <input type="search" class="form-control" id="mobile-search" placeholder="Search">
-          <button id="mobile-submit-btn" class="btn btn-outline-light" type="submit">
+          <input type="search" class="form-control" placeholder="Search">
+          <button class="btn btn-outline-light" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
@@ -80,111 +80,69 @@
   </div>
 
   <main>
-    <div class="home-page1"></div>
-    <div class="trendy-cards p-5">
-      <h3 class="text-secondary text-center fw-bolder text-uppercase mt-5 ms-5 p-5">Modern Mens Collection</h3>
-      <div class="container">
-        <div class="row">
-          <p id="item-count"></p>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/casual-shirt1.webp" class="card-img-top" alt="casual">
-                <h5 class="card-title mt-3">Slim Shirt</h5>
-                <p class="card-text">₹359</p>
-                <button class="btn btn-primary buy-btn" data-name="Slim Shirt"
-                  data-description="A smart olive green casual shirt crafted from breathable cotton fabric. Designed with a slim-fit cut, perfect for daily wear, office casuals, or weekend outings."
-                  data-rating="4.0" data-price="359" data-image="images/casual-shirt1.webp">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/casual-shirt3.avif" class="card-img-top" alt="casual">
-                <h5 class="card-title mt-3">Black Classic Shirt</h5>
-                <p class="card-text">₹440</p>
-                <button class="btn btn-primary buy-btn" data-name="Black Classic Shirt"
-                  data-description="A timeless black shirt with a clean silhouette. Made for effortless style, ideal for evening outings, dinner dates, or formal-casual occasions."
-                  data-rating="4.2" data-price="440" data-image="images/casual-shirt3.avif">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/casual-shirt3.jpg" class="card-img-top" alt="casual">
-                <h5 class="card-title mt-3">Casual Shirt</h5>
-                <p class="card-text">₹199</p>
-                <button class="btn btn-primary buy-btn" data-name="Casual Shirt"
-                  data-description="A versatile beige shirt featuring a modern tailored fit. Lightweight and comfortable, perfect for semi-formal events and everyday styling."
-                  data-rating="4.2" data-price="199" data-image="images/casual-shirt3.jpg">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/casual-shirt4.webp" class="card-img-top" alt="casual">
-                <h5 class="card-title mt-3">Party Wear Shirt</h5>
-                <p class="card-text">₹359</p>
-                <button class="btn btn-primary buy-btn" data-name="Party Wear Shirt"
-                  data-description="A bold teal blue shirt crafted for special occasions. Designed with premium fabric and a sleek finish for a sharp, confident look."
-                  data-rating="4.0" data-price="359" data-image="images/casual-shirt4.webp">View Details</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/modern-image1.webp" class="card-img-top" alt="modern">
-                <h5 class="card-title mt-3">Linen Shirt</h5>
-                <p class="card-text">₹180</p>
-                <button class="btn btn-primary buy-btn" data-name="Linen Shirt"
-                  data-description="A breathable ivory shirt with subtle vertical stripes. Made from lightweight linen blend fabric — perfect for summer styling."
-                  data-rating="4.0" data-price="180" data-image="images/modern-image1.webp">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/modern-image2.webp" class="card-img-top" alt="modern">
-                <h5 class="card-title mt-3">Urban Shirt</h5>
-                <p class="card-text">₹299</p>
-                <button class="btn btn-primary buy-btn" data-name="Urban Shirt"
-                  data-description="A trendy navy blue shirt with a structured design. Ideal for smart casual looks, college wear, or weekend hangouts."
-                  data-rating="4.3" data-price="299" data-image="images/modern-image2.webp">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/modern-image3.jpg" class="card-img-top" alt="modern">
-                <h5 class="card-title mt-3">Denim Shirt</h5>
-                <p class="card-text">₹590</p>
-                <button class="btn btn-primary buy-btn" data-name="Denim Shirt"
-                  data-description="A stylish light denim shirt featuring chest pockets and a relaxed fit. A must-have wardrobe essential for casual layering."
-                  data-rating="3.8" data-price="590" data-image="images/modern-image3.jpg">View Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 dress-cards">
-            <div class="card">
-              <div class="card-body text-center">
-                <img class="image" src="images/modern-image4.avif" class="card-img-top" alt="modern">
-                <h5 class="card-title mt-3">Classic Checkered Shirt</h5>
-                <p class="card-text">₹229</p>
-                <button class="btn btn-primary buy-btn" data-name="Classic Checkered Shirt"
-                  data-description="A crisp checkered shirt with a refined pattern. Perfect for semi-formal gatherings, office wear, and festive occasions."
-                  data-rating="4.2" data-price="229" data-image="images/modern-image4.avif">View Details</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container px-5">
+      <h4 class="text-center mb-5 pt-5 fw-bold">PRIVACY POLICY</h4>
+      <h5 class="fw-bold mb-4">General</h5>
+      <p>Reliance Retail Limited, having its registered office at 3rd Floor, Court House, Lokmanya Tilak Marg, Dhobi
+        Talao, Mumbai – 400 002, Maharashtra, India (“Reliance”, “we”, “us” or “our”) is managing and operating the
+        websites: WWW.TrendHub.COM (“TrendHub”),WWW.LUXE.TrendHub.COM (“TrendHub”) and the mobile application thereof (TrendHub and
+        TrendHub are collectively referred to as the “Platforms”) through which Reliance inter alia facilitates the
+        sale and purchase of a diverse range of fashion, home, lifestyle and other products and services listed on and
+        sold on the Platforms from time to time (“Products”) to the users of the Platforms (“User” or “Users” or “you”
+        or “your”). The term User/User(s) means any individual or entity which uses, accesses orbrowses the Platform
+        and/or purchases Products from the Platform.</p>
+      <p>Reliance is committed to protecting and respecting your privacy. This privacy policy (“Privacy Policy”),
+        together with the TrendHub and TrendHub TERMS AND CONDITIONS (“Terms of Use”) and all other policies notified by us
+        from time to time governs your use of the Platforms.This Privacy Policy describes our policies and procedures on
+        the collection, use, disclosure, sharing, processing, transfer storage, retention and safeguarding of the
+        Information (defined hereinafter) provided to us by you through the use of the Platforms and/or pursuantto the
+        purchase of the Products on the Platforms.</p>
+      <h5 class="fw-bold my-5">Applicability of the Privacy Policy:</h5>
+      <p>By using, browsing, accessing, or purchasing Products from the Platforms and/or by submission of Information
+        (and in case of a minor - submission of such minor’s Information either by the parents or the legal guardian),
+        you agree to be bound by the terms of this Privacy Policy andconsent to the collection, use, storage,
+        possession, dealing, processing, handling, sharing, disclosure, transfer or retention of your Information in
+        accordance with the terms of the Privacy Policy and agree to be governed by the laws of India including but not
+        limited to the laws applicable to data protection and privacy. We shall not use the User’s Information in any
+        manner except as provided under this Privacy Policy and to the extent permitted under the laws applicable to
+        data protection and privacy. All capitalized terms used herein if not defined shall have the same meaning as
+        ascribed to them under the Terms of Use.You may be able to access or browse the Platforms from outside the
+        geographical territories of the Republic of India, however please note that the Products listed on the Platform
+        and not offered for sale outside thegeographical territories of the Republic of India. Your Information will
+        primarily be collected, stored and processed in India and will be governed by the applicable laws (including
+        data protection and privacy laws) that are different from those that apply in the country in which you are
+        located.</p>
+      <p>This document is an electronic record and is governed by the provisions under the Information Technology Act,
+        2000 and rules made thereunder as may be applicable, and the amended provisions pertaining to electronic records
+        in various statutes as amended by the Information Technology Act, 2000. This electronic record is generated by a
+        computer system and does not require any physical or digital signatures.</p>
+      <p>You may be asked to provide your information anytime you visit, access, use or browse the Platforms. We may
+        share information and use it consistent with the provisions of this Privacy Policy. We may also combine it with
+        other information to provide and improve our Products, services, content and advertising.Please take a moment to
+        familiarize yourself with our Privacy Policy. If you do not agree with any provisions of the Terms or this
+        Privacy Policy, we advise you to not use or access the Platforms.</p>
+      <p>Please note that we may from time to time, modify the Terms of Use that govern your access and/or use of the
+        Platform. Every time you wish to use our Platform, please check these Terms of Use to ensure that you understand
+        the terms and conditions that apply at that time. Further, please note that we reserve theright to either change
+        the format and the content of the Platform or suspend the operation of the Platform (including any
+        non-availability of Products and/or Services offered on the Platform) for support or maintenance work, in order
+        to update the content or for any other reason, at any time.</p>
+      <p>We authorise you to view and/or use and/or access the Platform solely for identifying Products, purchases of
+        Products, making payments in relation to purchase of Products (in accordance with the Fees and Payments Policy)
+        and processing cancellation, returns and refunds (in accordance with the Cancellation,Return and Refund Policy)
+        in relation to the Products and availing any associated Services offered on the Platform. We therefore grant you
+        a non-exclusive, limited, revocable-at-will permission to access and/or use the Platform solely for the purpose
+        of purchase of Products or for availing any associated Services offered thereon.</p>
+      <p>By accepting this Agreement, you affirm that you are 18 (Eighteen) years of age or above and are fully
+        competent to enter into this Agreement, and to abide by and comply with this Agreement. If a user is below 18
+        (Eighteen) years of age, it is assumed that he/she is using/browsing the concerned Platform under the
+        supervision of his/herparent or legal guardian and that such user’s parent or legal guardian has read and agrees
+        to the terms of this Agreement, including the terms of purchase of Products on behalf of the minor user. In the
+        event we are made aware that a user is under the age of 18 and is using/browsing the Platform without the
+        supervision of his/her parent or legal guardian, we reserve the right to deactivate such user’s account without
+        further notice and suspend any associated Services. Further, if you are using the Services on behalf of a
+        company or organisation, you represent that you have the authority to act on behalf of that entity, and that
+        such entity accepts this Agreement.</p>
     </div>
   </main>
 
@@ -221,9 +179,9 @@
       </div>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
