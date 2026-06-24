@@ -31,6 +31,40 @@ p {
   object-fit: cover;
 }
 
+/* user login */
+
+.login-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+}
+.form{
+  width:350px;
+  height:auto;
+  border: 1px solid rgb(241, 236, 236);
+  box-shadow:0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding:30px;
+  border-radius: 5px;
+}
+
+#form-msg{
+  margin:20px 0px;
+}
+
+.error, .success{
+  font-size:14px;
+}
+
+.error{
+  color:red;
+}
+
+.success{
+  color: green;
+}
+
 /* hero carousel */
 
 .carousel-overlay {
