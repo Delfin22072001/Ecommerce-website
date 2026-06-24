@@ -124,8 +124,8 @@ function searchBar(input) {
   dress_cards.forEach(card => {
     const card_title = card.querySelector('.card-title')
     if (card_title.textContent.trim().toLowerCase().includes(input.toLowerCase())) {
-      count += 1      
-      card.style.display = "block"      
+      count += 1
+      card.style.display = "block"
     }
     else {
       item_count.style.color = "#555"
@@ -146,4 +146,53 @@ mobile_btn.addEventListener('click', (e) => {
   m_search = mobile_search.value
   searchBar(m_search)
 })
+
+// form
+
+ const username = document.getElementById('inputUsername')
+    const password = document.getElementById('inputPassword')
+    const phone = document.getElementById('inputPhoneNumber')
+    const form_msg = document.getElementById('form-msg')
+
+    document.getElementById('login-form').addEventListener('submit',(e)=>{
+      e.preventDefault()
+      const u_name = username.value.trim()
+      const pwd  = password.value.trim()
+      const p_no = phone.value.trim()
+
+      form_msg.classList.add('error')
+      form_msg.style.textAlign = "center"
+
+      if(u_name == ""){
+        form_msg.textContent="Username must not be empty"
+      }
+      else if(pwd == ""){
+        form_msg.textContent="Password must not be empty"
+      }  
+      else if(p_no == ""){
+        form_msg.textContent="Phone number must not be empty"
+      } 
+      else{
+        form_msg.textContent = "Login Successful!!"
+        form_msg.classList.remove('error')
+        form_msg.classList.add('success')
+        setTimeout(() => {
+          window.location.href="index.html"
+        }, 1000);
+      }   
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
