@@ -30,7 +30,7 @@
 
           <ul class="navbar-nav mx-auto">
             <li class="nav-item"><a class="nav-link mx-2" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link mx-2 active" href="womenClothing.html">Women</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="womenClothing.html">Women</a></li>
             <li class="nav-item"><a class="nav-link mx-2" href="kidsClothing.html">Kids</a></li>
             <li class="nav-item"><a class="nav-link mx-2" href="menClothing.html">Men</a></li>
           </ul>
@@ -38,17 +38,48 @@
           <!-- Desktop Search -->
           <form class="d-flex">
             <div class="input-group">
-              <input class="form-control" id="desktop-search" type="search" placeholder="Search">
-
-              <button id="desktop-submit-btn" class="btn btn-outline-light" type="submit">
+              <input id="form" class="form-control" type="search" placeholder="Search">
+              <button class="btn btn-outline-light" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
           </form>
+          <div class="user text-white ms-auto">
+            <i class="fa-solid fa-user"></i><a class="text-decoration-none text-white"
+              href="login.html">&nbsp;&nbsp;Login</a>
+          </div>
         </div>
       </div>
     </nav>
   </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
+
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">TrendHub</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="womenClothing.html">Women</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="kidsClothing.html">Kids</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="menClothing.html">Men</a></li>
+      </ul>
+
+      <!-- Mobile Search -->
+      <form class="mt-4">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Search">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- Mobile Sidebar -->
   <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu">
