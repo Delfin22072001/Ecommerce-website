@@ -149,38 +149,48 @@ mobile_btn.addEventListener('click', (e) => {
 
 // form
 
- const username = document.getElementById('inputUsername')
-    const password = document.getElementById('inputPassword')
-    const phone = document.getElementById('inputPhoneNumber')
-    const form_msg = document.getElementById('form-msg')
+  const username = document.getElementById('inputUsername')
+  const password = document.getElementById('inputPassword')
+  const phone = document.getElementById('inputPhoneNumber')
+  const form_msg = document.getElementById('form-msg')
 
-    document.getElementById('login-form').addEventListener('submit',(e)=>{
-      e.preventDefault()
-      const u_name = username.value.trim()
-      const pwd  = password.value.trim()
-      const p_no = phone.value.trim()
+  document.getElementById('login-form').addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const u_name = username.value.trim()
+    const pwd  = password.value.trim()
+    const p_no = phone.value.trim()
 
-      form_msg.classList.add('error')
-      form_msg.style.textAlign = "center"
+    form_msg.classList.add('error')
+    form_msg.style.textAlign = "center"
 
-      if(u_name == ""){
-        form_msg.textContent="Username must not be empty"
-      }
-      else if(pwd == ""){
-        form_msg.textContent="Password must not be empty"
-      }  
-      else if(p_no == ""){
-        form_msg.textContent="Phone number must not be empty"
-      } 
-      else{
-        form_msg.textContent = "Login Successful!!"
-        form_msg.classList.remove('error')
-        form_msg.classList.add('success')
-        setTimeout(() => {
-          window.location.href="index.html"
-        }, 1000);
-      }   
-    })
+    if(u_name == ""){
+      form_msg.textContent="Username must not be empty"
+    }
+    else if (u_name.length < 8){
+      form_msg.textContent="Username must have minimum 8 characters"
+    }
+    else if(pwd == ""){
+      form_msg.textContent="Password must not be empty"
+    }
+    else if(pwd.length < 8){
+      form_msg.textContent="Password must have minimum 8 characters"
+    }
+    else if(p_no == ""){
+      form_msg.textContent="Phone number must not be empty"
+    }
+    else if(p_no.length <= 10){
+      form_msg.textContent="Phone number must have 10 characters only"
+    }
+    else{
+      form_msg.textContent = "Login Successful!!"
+      form_msg.classList.remove('error')
+      form_msg.classList.add('success')
+      setTimeout(() => {
+        window.location.href="index.html"
+      }, 1000);
+    }   
+  })    
+  
 
 
 
