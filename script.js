@@ -159,7 +159,7 @@ function displayCart() {
     myCart.innerHTML = cartArray.length > 0 ? cartArray.map((cart, _) => {
       return (
         `<div class="cart-products">
-          <div><img src="${cart.image}" alt="${cart.name}"></div>
+          <div><img src="${cart.image}" alt="${cart.name}" width="100" height="150"></div>
           <div>
             <h3>${cart.name}</h3>
             <button class="remove-item" onclick=removeItem(${cart.id})>
@@ -174,11 +174,10 @@ function displayCart() {
       </div>`
       )
     }
-    ).join("") :
-      (
-        `<div class="empty-container">
+    ).join("") : (
+      `<div class="empty-container">
         <div class="empty-contents">
-        <img src="Images/shopping-bag.jpg" alt="shopping bag" width="300"/>
+          <img src="Images/shopping-bag.jpg" alt="shopping bag" width="300"/>
           <h2>Hey it feels so light!</h2>
           <p>There is nothing in your bag. Let's add some items</p>
           <a href="shop.html" class="btn">Shop Now</a>
