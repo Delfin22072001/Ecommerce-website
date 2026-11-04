@@ -6,6 +6,7 @@ const navbar = document.querySelector('.nav-content')
 const toggler = document.querySelector('.toggler')
 const cartCount = document.querySelector('.cart-count')
 const priceInput = document.querySelector('.price-input')
+const cartHeading = document.querySelector('#cart-heading')
 let cartArray = JSON.parse(localStorage.getItem('cart')) || []
 let myCart = document.querySelector('.cart-items')
 
@@ -194,9 +195,15 @@ function calculateTotal() {
     const priceValue = cartArray.map((item) => (
       item.price
     ))
-    const total = cartArray.length > 0 ? priceValue.reduce((prev, curr) => prev + curr) : ""
-    priceInput.innerHTML = cartArray.length > 0 ? `<b>Total Price: ₹${total}</b>` : ""
-
+    if(cartArray.length > 0){
+      const total =  priceValue.reduce((prev, curr) => prev + curr)
+      priceInput.innerHTML = `<b>Total Price: ₹${total}</b>`
+    }
+    else{
+      total = ""
+      priceInput.innerHTML = ""
+      cartHeading.textContent = ""
+    }
   }
 }
 
