@@ -157,10 +157,6 @@ h6 {
 }
 
 /* navbar icons */
-.icons .fa-bag-shopping {
-  position: relative;
-}
-
 .icons a:last-child {
   position: relative;
 }
@@ -604,14 +600,10 @@ form button{
   .follow-content .brand {
     font-size: 20px;
   }
-
 }
 
 /* desktop */
 @media (min-width:1025px) {
-
-
-
   .navbar {
     padding: 20px clamp(20px, 5vw, 100px);
   }
