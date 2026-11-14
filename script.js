@@ -18,7 +18,7 @@ if (navbar && toggler) {
   })
 }
 
-const newArrivals = [ 
+const newArrivals = [
   { id: 1, name: "Linen Oxford Shirt", description: "Breathable linen-cotton blend with a relaxed collar.", price: 1799, originalPrice: 2299, sizes: ["S", "M", "L", "XL"], colors: ["Sky Blue", "White", "Olive"], rating: 4.5, inStock: true, arrivalDate: "2026-10-12", image: "Images/new-arrivals/Linen.webp" },
   { id: 2, name: "Slim Fit Chinos", description: "Stretch cotton twill, tapered leg, easy all-day comfort.", price: 1999, originalPrice: 2499, sizes: ["28", "30", "32", "34", "36"], colors: ["Khaki", "Navy", "Charcoal"], rating: 4.4, inStock: true, arrivalDate: "2026-10-10", image: "Images/new-arrivals/Slim.webp" },
   { id: 3, name: "Floral Wrap Dress", description: "Midi length with a tie waist and flutter sleeves.", price: 2299, originalPrice: 2999, sizes: ["XS", "S", "M", "L", "XL"], colors: ["Lilac Floral", "Navy Floral"], rating: 4.7, inStock: true, arrivalDate: "2026-10-16", image: "Images/new-arrivals/Floral.webp" },
@@ -33,10 +33,10 @@ const newArrivals = [
 ]
 
 const categories = [
-  { id: 1, name: "Men", image: "Images/home-category/men-image.jpg"},
-  { id: 2, name: "Women", image: "Images/home-category/women-image.jpg"},
-  { id: 3, name: "Kids", image: "Images/home-category/kids-image.avif"},
-  { id: 4, name: "Beauty", image: "Images/home-category/beauty-image.jpg"}
+  { id: 1, name: "Men", image: "Images/home-category/men-image.jpg" },
+  { id: 2, name: "Women", image: "Images/home-category/women-image.jpg" },
+  { id: 3, name: "Kids", image: "Images/home-category/kids-image.avif" },
+  { id: 4, name: "Beauty", image: "Images/home-category/beauty-image.jpg" }
 ];
 
 const products = [
@@ -168,10 +168,9 @@ function displayCart() {
             <p class="desc">${cart.description}</p>
             <span>₹${cart.price}</span>
             <span class="original-price">₹${cart.originalPrice}</span>
-            <p class="return"><i class="fa-solid fa-arrow-rotate-left"></i><b> 7 days</b> return available</p>
             <p class="delivery-date"><i class="fa-regular fa-circle-check"></i> Delivery within 1 week</p>
-          </div>    
-      </div>`
+          </div>  
+        </div>`
       )
     }
     ).join("") : (
@@ -183,7 +182,7 @@ function displayCart() {
           <a href="shop.html" class="btn">Shop Now</a>
         </div>
       </div>`
-      )
+    )
   }
 }
 displayCart()
@@ -194,11 +193,11 @@ function calculateTotal() {
     const priceValue = cartArray.map((item) => (
       item.price
     ))
-    if(cartArray.length > 0){
-      const total =  priceValue.reduce((prev, curr) => prev + curr)
+    if (cartArray.length > 0) {
+      const total = priceValue.reduce((prev, curr) => prev + curr)
       priceInput.innerHTML = `<b>Total Price: ₹${total}</b>`
     }
-    else{
+    else {
       total = ""
       priceInput.innerHTML = ""
       cartHeading.textContent = ""
