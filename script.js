@@ -215,12 +215,45 @@ function removeItem(id) {
   calculateTotal()
 }
 
-
 window.addEventListener('pageshow', (e) => {
   if (e.persisted) {
     cartArray = JSON.parse(localStorage.getItem('cart')) || []
     countUpdate()
     displayCart()
     calculateTotal()
+  }
+})
+
+// form
+const userName = document.getElementById('name')
+const phone = document.getElementById('phone')
+const message = document.getElementById('message')
+const form = document.getElementById('form')
+const error = document.getElementById('error')
+
+form.addEventListener('submit', (e) =>{
+  let messages = []
+
+  if(userName.value === "" || userName.value === "null"){
+    messages.push("Name is required")
+  }
+  
+  if(phone.value.length < 10){
+    messages.push("Phone Number must be of length 10")
+  }
+
+  if(message.length < 0){
+    messages.push("Please leave us a message")
+  }
+
+  if(messages.length > 0){
+    e.preventDefault()
+    error.style.color = "red"
+    error.innerText = messages.join(', ')
+  }
+
+  if(messages.length === 0){
+    error.innerText = "Message Sent Successfully"
+    error.style.color = "green"
   }
 })

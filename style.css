@@ -31,7 +31,7 @@ header {
   top: 0;
   z-index: 999;
   background-color: var(--background);
-  padding:0 80px 0 100px;
+  padding: 0 0 0 100px;
 }
 
 body,
@@ -80,7 +80,7 @@ h6 {
 
 .navbar {
   display: flex;
-  gap:100px;
+  gap:150px;
   align-items: center;
 }
 
@@ -234,7 +234,7 @@ h6 {
 .new-arrivals,
 .shop-category {
   text-align: center;
-  padding: 50px;
+  padding: 30px;
   height: auto;
 }
 
@@ -384,6 +384,35 @@ h6 {
   margin:10px 0 20px 0;
 }
 
+form{
+  border:1px solid var(--border);
+  max-width:400px;
+  padding:30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+form input, form textarea{
+  min-width:300px;
+  width:100%;
+  padding:10px 15px;
+  margin:5px 0;
+  border:1px solid var(--border);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button{
+  width:100%;
+  margin-top: 20px;
+}
+
+#error{
+  margin:10px 0;
+  text-align: center;
+}
+
 .contact-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -393,48 +422,26 @@ h6 {
   height: auto;
 }
 
+.contact-us h2{
+  margin:20px 0;
+}
+
 .map-container iframe{
   display: block;
   width: 100%;
   max-width: 600px;
 }
 
-.contact-us p{
-  color:var(--muted);
-  margin:10px 0;
-}
-
-.detail-container{
-  display: flex;
-  align-items: center;
-  gap:10px;
-  margin:20px 0;  
-}
-
-.detail-container .icon i{
-  color:var(--button);
-}
-
-.detail-container:last-child {
-  margin-bottom: 0;
-}
-
 /* footer */
 .footer {
   background-color: var(--background);
-  height: auto;
-  padding: 20px;
+  padding:20px 0;
+  text-align: center;
+  margin-top:50px;
 }
 
-.footer .contents h2 {
-  color: var(--text-white);
-  margin: 20px 0;
-}
-
-.footer .contents p {
+.footer p {
   color: var(--muted);
-  width: 350px;
-  line-height: 20px;
 }
 
 .follow-content .brand {
@@ -541,12 +548,6 @@ h6 {
     padding: 0 10px;
   }
 
-  .contact-container{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-  }
-
   .map-container{
     width: 100%;
   }
@@ -604,21 +605,12 @@ h6 {
     font-size: 20px;
   }
 
-  .footer .contents {
-    padding: 20px 0;
-  }
-
-  .footer .contents p {
-    width: 280px;
-  }
 }
 
 /* desktop */
 @media (min-width:1025px) {
 
-  .footer {
-    padding: 60px;
-  }
+
 
   .navbar {
     padding: 20px clamp(20px, 5vw, 100px);

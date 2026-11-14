@@ -25,20 +25,17 @@
         <span></span>
       </button>
 
-      <div class="nav-content hide">
+      <div class="nav-content">
         <ul class="nav-items">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="shop.html" class="nav-link">Shop</a></li>
           <li><a href="contact.html" class="nav-link" id="active">Contact</a></li>
         </ul>
-      </div>
-
-      <div class="nav-content">
         <input type="search" name="search" id="search" class="search" placeholder="Search for products">
       </div>
 
       <div class="icons">
-        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count"></span></a>
+        <a href="cart.html" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count"></span></a>
       </div>
     </nav>
   </header>
@@ -47,21 +44,15 @@
     <section class="contact-container">
       <div class="contact-us">
         <h2>Contact Us</h2>
-        <p>Some information you want to know</p>
-        <div class="detail-container">
-          <div class="icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="details"><h3>Phone Number</h3><p>+91 xxxxxxxxxx</p></div>
-        </div>
-
-        <div class="detail-container">
-          <div class="icon"><i class="fa-solid fa-location-arrow"></i></div>
-          <div class="details"><h3>Address</h3><p>Chennai, Tamil Nadu</p></div>
-        </div>
-
-        <div class="detail-container">
-          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-          <div class="details"><h3>Email</h3><p>trendhub@gmail.com</p></div>
-        </div>
+        <form id="form">
+          <table>
+            <tr><td><input type="text" id="name" placeholder="Name"></td></tr>
+            <tr><td><input type="tel" id="phone" placeholder="Phone"></td></tr>
+            <tr><td><textarea id="message" placeholder="Message" rows="5"></textarea></td></tr>
+            <tr><td><button type="submit" class="btn">Submit</button></td></tr>
+            <tr><td><div id="error"></div></td></tr>
+          </table>
+        </form>
       </div>
       <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248759.88430766194!2d80.06875121583914!3d13.043742663328567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1793698163607!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
     </section>
@@ -69,10 +60,7 @@
   </main>
 
   <footer class="footer">
-    <div class="contents">
-      <h2>TrendHub</h2>
-      <p>Welcome to TrendHub, your ultimate online shopping destination for curated, innovative, and highly sought-after lifestyle products.</p>
-    </div>
+    <p>©<script>document.write(new Date().getFullYear())</script> TrendHub. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
