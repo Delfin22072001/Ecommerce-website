@@ -64,11 +64,9 @@ const products = [
 ];
 
 localStorage.setItem('newArrivals', JSON.stringify(newArrivals))
-localStorage.setItem('categories', JSON.stringify(categories))
 localStorage.setItem('products', JSON.stringify(products))
 
 const newArrivalList = JSON.parse(localStorage.getItem('newArrivals')) || []
-const categoriesList = JSON.parse(localStorage.getItem('categories')) || []
 const productsList = JSON.parse(localStorage.getItem('products')) || []
 
 if (cards) {
@@ -82,15 +80,6 @@ if (cards) {
       </div>        
     </div>`
   )).join('')
-}
-
-if (categoryData) {
-  categoryData.innerHTML = categoriesList.map((category, _) => (
-    `<div class="category">
-        <img src="${category.image}" alt="${category.name}" />
-      </div>`
-  )
-  ).join('')
 }
 
 if (myProducts) {
@@ -168,7 +157,6 @@ function displayCart() {
             <p class="desc">${cart.description}</p>
             <span>₹${cart.price}</span>
             <span class="original-price">₹${cart.originalPrice}</span>
-            <p class="delivery-date"><i class="fa-regular fa-circle-check"></i> Delivery within 1 week</p>
           </div>  
         </div>`
       )
@@ -242,7 +230,7 @@ form.addEventListener('submit', (e) =>{
     messages.push("Phone Number must be of length 10")
   }
 
-  if(message.length < 0){
+  if(message.value.length == 0){
     messages.push("Please leave us a message")
   }
 
