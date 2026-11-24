@@ -32,13 +32,6 @@ const newArrivals = [
   { id: 11, name: "Hydrating Sunscreen SPF 50", description: "No white cast, light gel texture, suits daily wear.", price: 599, originalPrice: 799, sizes: ["50 ml"], colors: [], rating: 4.6, inStock: true, arrivalDate: "2026-10-09", image: "Images/new-arrivals/Hydrating.webp" }
 ]
 
-const categories = [
-  { id: 1, name: "Men", image: "Images/home-category/men-image.jpg" },
-  { id: 2, name: "Women", image: "Images/home-category/women-image.jpg" },
-  { id: 3, name: "Kids", image: "Images/home-category/kids-image.avif" },
-  { id: 4, name: "Beauty", image: "Images/home-category/beauty-image.jpg" }
-];
-
 const products = [
   { id: 12, name: "Men's Cotton T-Shirt", description: "Soft round-neck tee in breathable combed cotton.", category: "men", price: 499, originalPrice: 699, sizes: ["S", "M", "L", "XL"], colors: ["White", "Black", "Navy"], rating: 4.3, inStock: true, image: "Images/products/men-tshirt.webp" },
   { id: 13, name: "Women's Floral Dress", description: "Flowy knee-length dress with a soft floral print.", category: "women", price: 1499, originalPrice: 1999, sizes: ["XS", "S", "M", "L", "XL"], colors: ["Lilac Floral", "Navy Floral"], rating: 4.6, inStock: true, image: "Images/products/women-dress.webp" },
@@ -71,30 +64,29 @@ const productsList = JSON.parse(localStorage.getItem('products')) || []
 
 if (cards) {
   cards.innerHTML = newArrivalList.map((newArrival, _) => (
-    `<div class="card">
-        <img src="${newArrival.image}" alt="${newArrival.name}"/>
-        <h3 class="heading">${newArrival.name}</h3>
-        <p class="price">₹${newArrival.price}</p>
-      <div>
+  ` <div class="card">
+      <img src="${newArrival.image}" alt="${newArrival.name}"/>
+      <h3 class="heading">${newArrival.name}</h3>
+      <p class="price">₹${newArrival.price}</p>
       <button class="btn" onclick=addToCart(${newArrival.id})>Add to Cart</button>
-      </div>        
     </div>`
   )).join('')
 }
 
-if (myProducts) {
-  myProducts.innerHTML = productsList.map((product, _) => (
+function DisplayProducts(shopProducts){
+  if (myProducts) {
+  myProducts.innerHTML = shopProducts.map((product, _) => (
     `<div class="card">
-        <img src="${product.image}" alt="${product.name}"/>
-        <h3 class="heading">${product.name}</h3>
-        <p class="price">₹${product.price}</p>
-      <div>
+      <img src="${product.image}" alt="${product.name}"/>
+      <h3 class="heading">${product.name}</h3>
+      <p class="price">₹${product.price}</p>
       <button class="btn" onclick=addToCart(${product.id})>Add to Cart</button>
-      </div>        
     </div>`
-  )
-  ).join('')
+  )).join('')
 }
+}
+
+DisplayProducts(productsList)
 
 //search
 const newArrivalCard = document.querySelectorAll('.card')
@@ -219,29 +211,43 @@ const message = document.getElementById('message')
 const form = document.getElementById('form')
 const error = document.getElementById('error')
 
-form.addEventListener('submit', (e) =>{
+if(form){
+  form.addEventListener('submit', (e) => {
   let messages = []
 
-  if(userName.value === "" || userName.value === "null"){
+  if (userName.value === "" || userName.value === "null") {
     messages.push("Name is required")
   }
-  
-  if(phone.value.length < 10){
+
+  if (phone.value.length < 10) {
     messages.push("Phone Number must be of length 10")
   }
 
-  if(message.value.length == 0){
+  if (message.value.length == 0) {
     messages.push("Please leave us a message")
   }
 
-  if(messages.length > 0){
+  if (messages.length > 0) {
     e.preventDefault()
     error.style.color = "red"
     error.innerText = messages.join(', ')
   }
 
-  if(messages.length === 0){
+  if (messages.length === 0) {
     error.innerText = "Message Sent Successfully"
     error.style.color = "green"
   }
 })
+}
+
+// products filter
+const filterOptions = document.getElementById('category-options')
+
+if(filterOptions){
+  filterOptions.addEventListener('change', (e) =>{
+  let filterValue = e.target.value
+  const filteredProduct = filterValue === "all"? products: productsList.filter((product) => product.category === filterValue)
+  DisplayProducts(filteredProduct)
+})
+}
+

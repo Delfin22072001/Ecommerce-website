@@ -16,7 +16,7 @@
 
 <body>
 
- <header>
+  <header>
     <nav class="navbar">
       <a class="navbar-brand" href="index.html">TrendHub</a>
       <button class="toggler">
@@ -35,7 +35,8 @@
       </div>
 
       <div class="icons">
-        <a href="cart.html" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count"></span></a>
+        <a href="cart.html" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span
+            class="cart-count"></span></a>
       </div>
     </nav>
   </header>
@@ -44,12 +45,21 @@
 
     <section class="shop-products">
       <h1>Shop Products</h1>
+      <div class="product-category">
+        <select id="category-options">
+          <option value="all">All</option>
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+          <option value="kids">Kids</option>
+          <option value="beauty">Beauty</option>
+        </select>
+      </div>
       <div class="my-products"></div>
     </section>
 
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="footer-brand">
       <h4>TrendHub</h4>
       <p>Curating what’s next in style, culture, and everyday living</p>
