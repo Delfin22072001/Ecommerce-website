@@ -2,7 +2,7 @@
 
 **Elevate Your Everyday Style!**
 
-TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and JavaScript. It provides a simple and user-friendly shopping experience where users can explore new arrivals, browse all available products, and manage their shopping cart.
+TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and JavaScript. It provides a simple and user-friendly shopping experience where users can explore new arrivals, browse products by category, and manage their shopping cart.
 
 ## 🌐 Live Demo
 
@@ -12,6 +12,7 @@ TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and 
 
 - **New Arrivals:** Displays newly added products on the homepage.
 - **Shop Page:** Browse the complete collection of available products.
+- **Product Categories:** Filter products by category to quickly find what you are looking for.
 - **Add to Cart:** Add products to the shopping cart.
 - **Remove from Cart:** Remove unwanted products from the cart.
 - **Real-Time Total Calculation:** Automatically updates the cart total when products are added or removed.
@@ -28,6 +29,7 @@ TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and 
 
 ### 🛒 Shop Page
 - Displays all available products.
+- Category filter to show products from a selected category.
 - Allows users to browse the complete product collection.
 - Add products to the shopping cart.
 
@@ -65,7 +67,7 @@ Open `index.html` in your browser, or use the Live Server extension in VS Code i
 
 ## 🎯 Project Objective
 
-The main objective of TrendHub is to build a responsive frontend e-commerce application while gaining practical experience in JavaScript DOM manipulation, product rendering, cart management, event handling, and browser Local Storage.
+The main objective of TrendHub is to build a responsive frontend e-commerce application while gaining practical experience in JavaScript DOM manipulation, product rendering, category filtering, cart management, event handling, and browser Local Storage.
 
 ## 👨‍💻 Author
 
