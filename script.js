@@ -89,17 +89,11 @@ function DisplayProducts(shopProducts){
 DisplayProducts(productsList)
 
 //search
-const newArrivalCard = document.querySelectorAll('.card')
 
 function searchProduct(value) {
-  newArrivalCard.forEach((card) => {
+  document.querySelectorAll('.card').forEach((card) => {
     const heading = card.querySelector('.heading').textContent.toLowerCase()
-    if (heading.includes(value)) {
-      card.style.display = "block"
-    }
-    else {
-      card.style.display = "none"
-    }
+    card.style.display = heading.includes(value) ? "block" : "none"
   })
 }
 
@@ -178,7 +172,6 @@ function calculateTotal() {
       priceInput.innerHTML = `<b>Total Price: ₹${total}</b>`
     }
     else {
-      total = ""
       priceInput.innerHTML = ""
       cartHeading.textContent = ""
     }
@@ -246,7 +239,7 @@ const filterOptions = document.getElementById('category-options')
 if(filterOptions){
   filterOptions.addEventListener('change', (e) =>{
   let filterValue = e.target.value
-  const filteredProduct = filterValue === "all"? products: productsList.filter((product) => product.category === filterValue)
+  const filteredProduct = filterValue === "all"? productsList: productsList.filter((product) => product.category === filterValue)
   DisplayProducts(filteredProduct)
 })
 }

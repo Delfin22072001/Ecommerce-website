@@ -2,7 +2,7 @@
 
 **Elevate Your Everyday Style!**
 
-TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and JavaScript. It provides a simple and user-friendly shopping experience where users can explore new arrivals, browse products by category, and manage their shopping cart.
+TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and JavaScript. It provides a simple and user-friendly shopping experience where users can explore new arrivals, browse products by category, search for items, and manage their shopping cart.
 
 ## 🌐 Live Demo
 
@@ -12,12 +12,14 @@ TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and 
 
 - **New Arrivals:** Displays newly added products on the homepage.
 - **Shop Page:** Browse the complete collection of available products.
-- **Product Categories:** Filter products by category to quickly find what you are looking for.
+- **Category Filter:** Use the category dropdown to view products by Men, Women, Kids, or Beauty.
+- **Product Search:** Search products by name and see matching results instantly.
 - **Add to Cart:** Add products to the shopping cart.
 - **Remove from Cart:** Remove unwanted products from the cart.
 - **Real-Time Total Calculation:** Automatically updates the cart total when products are added or removed.
 - **Local Storage:** Saves cart information in the browser, keeping cart items available after refreshing the page.
-- **Responsive Design:** Provides a smooth browsing experience across different screen sizes.
+- **Contact Form Validation:** Validates name, phone number, and message before submission.
+- **Responsive Design:** Provides a smooth browsing experience across different screen sizes, including a mobile navigation menu.
 
 ## 📄 Website Pages
 
@@ -29,15 +31,15 @@ TrendHub is a responsive frontend e-commerce website built using HTML, CSS, and 
 
 ### 🛒 Shop Page
 - Displays all available products.
-- Category filter to show products from a selected category.
-- Allows users to browse the complete product collection.
+- Category dropdown to filter products (All, Men, Women, Kids, Beauty).
+- Search box to find products by name.
 - Add products to the shopping cart.
 
 ### 🛍️ Shopping Cart
-- Displays selected products.
-- Shows product prices.
+- Displays selected products with description and price.
 - Allows users to remove products.
 - Automatically calculates the updated total price.
+- Shows an empty cart message with a link back to the shop.
 - Stores cart information using browser Local Storage.
 
 ## 🛠️ Technologies Used
@@ -63,11 +65,11 @@ cd your-project-folder
 
 **3. Open the project**
 
-Open `index.html` in your browser, or use the Live Server extension in VS Code if your project uses it.
+Open `index.html` in your browser, or use the Live Server extension in VS Code.
 
 ## 🎯 Project Objective
 
-The main objective of TrendHub is to build a responsive frontend e-commerce application while gaining practical experience in JavaScript DOM manipulation, product rendering, category filtering, cart management, event handling, and browser Local Storage.
+The main objective of TrendHub is to build a responsive frontend e-commerce application while gaining practical experience in JavaScript DOM manipulation, product rendering, category filtering, search, cart management, event handling, form validation, and browser Local Storage.
 
 ## 👨‍💻 Author
 
